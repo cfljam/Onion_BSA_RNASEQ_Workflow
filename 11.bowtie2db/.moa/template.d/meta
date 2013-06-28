@@ -1,0 +1,6 @@
+class: core
+installed: '2013-05-17T06:39:41.112186'
+name: bowtiedb
+priority: 100
+provider: core
+provider_type: core

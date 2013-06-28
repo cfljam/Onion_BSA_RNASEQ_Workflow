@@ -1,0 +1,3 @@
+input: ../10.References/CUDH2150_merged.fasta
+jobid: bowtie2db
+title: db for combined assembly
