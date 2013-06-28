@@ -1,0 +1,6 @@
+jobid: CMH_test
+postcommand: awk -v P=0.000000003 '$16 < P' output.cmh > sig_hits
+process: perl ~/bin/popoolation2_1201/cmh-test.pl --input ../16.PoPoolation/BOLT_pools_java.sync
+  --output output.cmh --min-count 2 --min-coverage 20  --max-coverage 1000 --population
+  1-10,2-11,3-12 --remove-temp
+title: ' perform CMH test of BoltA vs NonB reps'

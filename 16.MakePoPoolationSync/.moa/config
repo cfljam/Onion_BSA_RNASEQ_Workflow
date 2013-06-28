@@ -1,0 +1,8 @@
+jobid: PoPoolation
+postcommand: echo awk '/JR851382|k69_12840|k45_197610/'  BOLT_pools_java.sync > ACP267.sync
+precommand: echo svn checkout http://popoolation2.googlecode.com/svn/trunk/ popoolation2
+process: java -ea -Xmx7g -jar popoolation2/mpileup2sync.jar --input ../15.mpileup/BOLT_pools.mpileup  --output
+  BOLT_pools_java.sync --fastq-type sanger --min-qual 20 --threads 8
+title: 'make files for popoolation
+
+  '

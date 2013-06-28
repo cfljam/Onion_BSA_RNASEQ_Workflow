@@ -1,0 +1,4 @@
+jobid: mpileup
+process: samtools mpileup -B -f ../10.References/CUDH2150_merged.fasta ../14.merge_bam/*.bam  >
+  BOLT_pools.mpileup
+title: call snps

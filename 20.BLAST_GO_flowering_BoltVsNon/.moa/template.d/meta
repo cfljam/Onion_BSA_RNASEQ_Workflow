@@ -1,0 +1,6 @@
+class: core
+installed: '2013-01-07T14:00:40.114358'
+name: blast
+priority: 100
+provider: core
+provider_type: core

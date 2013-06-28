@@ -1,0 +1,6 @@
+class: core
+installed: '2013-05-17T06:41:25.660799'
+name: bowtie
+priority: 100
+provider: core
+provider_type: core

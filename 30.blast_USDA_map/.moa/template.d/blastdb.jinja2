@@ -1,0 +1,11 @@
+### run
+
+echo "Creating blast db for {{input}}"
+formatdb -i {{input}} -p {{protein}} -n {{dbname}}
+touch {{dbname}}
+
+### clean
+
+rm {{blastdb_name}}
+rm {{blastdb_name}}.*
+

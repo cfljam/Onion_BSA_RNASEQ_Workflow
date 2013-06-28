@@ -1,0 +1,39 @@
+### run
+
+outbase=`basename {{ output }} .bam`
+														
+bowtie -S {{ extra_params }} --un ${outbase}.unmapped.fq		\
+	--un ${outbase}.unmapped.fq									\
+    {{ ebwt_base }} {{ fq_input }}								\
+	| samtools view -bS - ${outbase}.unsorted.bam
+
+samtools sort ${outbase}.unsorted.bam ${outbase}
+samtools index ${outbase}.bam
+samtools flagstat ${outbase}.bam  > ${outbase}.report
+
+### clean
+
+rm *.bam
+rm *.bam.bai
+rm *.report
+
+### unittest
+
+mkdir 01.bowtiedb
+cd 01.bowtiedb
+moa new -t 'test db' bowtiedb
+moa set input=${MOABASE}/share/test/test.fasta
+moa set ebwt_outfile_base=testDB
+moa run
+
+cd ../
+mkdir 02.bowtie_se
+cd 02.bowtie_se
+moa new bowtie_se -t 'bowtie se'
+moa set ebwt_base=../01.bowtiedb/testDB
+moa set fq_input=${MOABASE}/share/test/*.fq
+moa show
+moa run
+ls
+[[ -s reads_1.bam ]]
+[[ -s reads_2.bam ]]

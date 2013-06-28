@@ -1,0 +1,7 @@
+jobid: CMH_test
+postcommand: ' awk -v P=4.3e-8 ''$16 < P'' output.cmh > sig_hits; python parse_CMH.py
+  sig_hits > sig_hits.out'
+process: perl ~/bin/popoolation2_1201/cmh-test.pl --input ../16.PoPoolation/BOLT_pools_java.sync
+  --output output.cmh --min-count 2 --min-coverage 20  --max-coverage 1000 --population
+  1-10,2-11,3-12  --remove-temp
+title: ' perform CMH test of Bolt vs Non reps, in-phase with ACP267'

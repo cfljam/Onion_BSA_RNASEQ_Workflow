@@ -1,0 +1,6 @@
+db: ../11.bowtie2db/db
+fq_forward_input: ../../10.RNASEQ_2012/00.raw/NXD_BOLT_SAMPLES/*_R1_001.fastq
+fq_reverse_input: ../../10.RNASEQ_2012/00.raw/NXD_BOLT_SAMPLES/*_R2_001.fastq
+jobid: bowtie2
+max_insertsize: 500
+title: map bolt pools to  for combined assembly

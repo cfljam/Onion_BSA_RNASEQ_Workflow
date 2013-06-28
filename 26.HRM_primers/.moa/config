@@ -1,0 +1,7 @@
+jobid: test_HRM_primers
+postcommand: perl ~/Galaxy_PCR_markers/parse_primersearch.pl primersearch.out primersearch.formatted.out;
+  sed 's/:/\t/g' primersearch.formatted.out | awk '$1!=$5 {print$1}' | sort | uniq
+  -c > off_target_counts
+process: ' primersearch -seqall ../19.collect_hits_BoltVsNon/contig_clusters.fasta  -infile
+  shortlist -mismatchpercent 0 -outfile primersearch.out'
+title: ePCR on short list

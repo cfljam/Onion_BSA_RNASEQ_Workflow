@@ -1,0 +1,8 @@
+jobid: collect_hits
+postcommand: awk '{print $1}' ../17.CMH_test_BoltVsNon/BoltAvsNonB_sig_hits_filtered.out  |
+  sort | uniq | fastaselect -c -f ../10.References/CUDH2150_merged.fasta  | sed "s/\(>\w*\)\s*.*/\1/"
+  > filtered_contig_clusters.fasta;samtools faidx *.fasta
+precommand: cut -f1 ../17.CMH_test_BoltVsNon/sig_hits | uniq  > contigs
+process: cat contigs |  fastaselect -c -f ../10.References/CUDH2150_merged.fasta  |
+  sed "s/\(>\w*\)\s*.*/\1/" > contigs.fasta
+title: assemble hits from CMH test into fasta

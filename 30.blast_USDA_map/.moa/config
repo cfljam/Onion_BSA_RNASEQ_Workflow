@@ -1,0 +1,4 @@
+db: /data/moa/onion/map/20.USDA_2012/30.blastdb/db
+input: '*.fasta'
+jobid: blast_USDA_map
+title: blast BSA hits to USDA map
