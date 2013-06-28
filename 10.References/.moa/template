@@ -1,0 +1,39 @@
+author: Mark Fiers, Yogini Idnani
+backend: ruff
+commands:
+  clean:
+    help: Remove all job data
+    mode: simple
+  run:
+    help: Create the index
+    mode: simple
+creation_date: Wed Nov 10 07:56:48 2010
+description: Builds a bwa index from a reference sequence
+filesets:
+  input:
+    category: input
+    help: Input fasta file for the bowtie database
+    optional: false
+    pattern: '*/*.fasta'
+    type: single
+moa_id: bwa_index
+modification_date: Wed Nov 10 07:56:48 2010
+name: bwa_index
+parameters:
+  algorithm:
+    default: is
+    help: Algorithm for constructing BWT index. Available options are 'is' and  'bwtsw'
+    optional: true
+    type: string
+  color_space:
+    category: ''
+    default: false
+    help: input sequences are in the color space
+    optional: true
+    type: boolean
+  prefix:
+    default: db
+    help: Name of the bwa index to create
+    optional: true
+    type: string
+title: Bwa index builder

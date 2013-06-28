@@ -1,0 +1,6 @@
+class: core
+installed: '2013-01-13T08:30:45.036619'
+name: bwa_index
+priority: 100
+provider: core
+provider_type: core
