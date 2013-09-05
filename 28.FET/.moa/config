@@ -1,4 +1,0 @@
-jobid: FET
-process: perl ~/bin/popoolation2_1201/fisher-test.pl  --input ../16.PoPoolation/BOLT_pools_java.sync
-  --output output.fet --max-coverage 1000 --suppress-noninformative
-title: run Fishers Exat Test on all SNPs

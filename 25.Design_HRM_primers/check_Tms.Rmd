@@ -1,0 +1,27 @@
+HRM Primer Tm
+========================================================
+
+
+
+```{r}
+setwd("/data/moa/onion/80.transcriptome/50.NXD_BOLTF2/25.Design_HRM_primers")
+my_data_types=c("character","character","character","numeric","character","character","numeric","numeric","numeric")
+colNames<- c("SNP_Target_ID", "Position","Ref_base","Variant_base" ,"PRIMER_LEFT_SEQUENCE",'PRIMER_RIGHT_SEQUENCE', "ref_melt_Tm","var_melt_Tm","Tm_difference")
+my_data <- read.table("output",col.names=colNames,colClasses=my_data_types, na.strings=c("NONE"))
+
+```
+
+Now plot with ggplot
+
+```{r fig.width=7, fig.height=6}
+library("ggplot2")
+tm_hist <- ggplot(data=my_data,aes(x=ref_melt_Tm,y=..density..)) +geom_histogram(binwidth=2,alpha=0.2)
+tm_hist +  geom_density()
+
+```
+
+Print out Amplicons with very high Tms
+
+```{r}
+my_data[which(my_data$ref_melt_Tm > 90),]
+```
