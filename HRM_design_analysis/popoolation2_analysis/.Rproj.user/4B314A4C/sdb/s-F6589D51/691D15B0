@@ -1,0 +1,21 @@
+{
+    "contents" : "",
+    "created" : 1390358053455.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "691D15B0",
+    "lastKnownWriteTime" : 0,
+    "path" : null,
+    "properties" : {
+        "caption" : "all_bolt",
+        "contentUrl" : "content?title=all_bolt&file=25c4682a62b148108515006a7cc5d485.htm",
+        "displayedObservations" : 1000,
+        "displayedVariables" : 16,
+        "totalObservations" : 286228,
+        "variables" : 16
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

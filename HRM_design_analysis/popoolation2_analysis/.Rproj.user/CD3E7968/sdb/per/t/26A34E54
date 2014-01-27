@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1390437647861.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "26A34E54",
+    "lastKnownWriteTime" : 140393890971648,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "combined",
+        "contentUrl" : "content?title=combined&file=c39933cd7676454e88bc49aa599d75bc.htm",
+        "displayedObservations" : "1000",
+        "displayedVariables" : 21,
+        "totalObservations" : "286228",
+        "variables" : "21"
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
