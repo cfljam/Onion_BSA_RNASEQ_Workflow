@@ -1,9 +1,0 @@
-jobid: primersearch_hits
-postcommand: perl ~/Galaxy_PCR_markers/parse_primersearch.pl primersearch.out primersearch.formatted.out;
-  for HIT in `cut -f2 primersearch.formatted.out | sort | uniq`; do grep $HIT ../17.CMH_test_BoltVsNon/BoltAvsNonB_sig_hits_filtered.out
-  ; done > BoltAvsNonB_sig_hits_filtered.primersearch.hits
-precommand: cat ACPA_primers > primers;  mysql -u alliumviewer -h 10.16.1.118  -D
-  onion_marker -e 'select * from primersearchview'  | awk 'FNR>1{print}' >> primers
-process: primersearch -seqall ../19.collect_hits_BoltVsNon/contig_clusters.fasta  -infile
-  primers -mismatchpercent 10 -outfile primersearch.out
-title: primersearch BSA hits

@@ -1,5 +1,0 @@
-input: ./CUDH2150_merged.fasta
-jobid: References
-postcommand: sed 's/\(>\w*\)\s*.*/\1/'  CUDH2150_merged.fasta > CUDH2150_merged_clean_header.fasta
-process: bwa index CUDH2150_merged.fasta
-title: Put reference assembly here and fix the header to remove all but the ID

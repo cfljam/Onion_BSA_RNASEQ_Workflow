@@ -1,8 +1,0 @@
-jobid: primersearch_hits
-postcommand: perl ~/Galaxy_PCR_markers/parse_primersearch.pl primersearch.out primersearch.formatted.out
-precommand: cat ACPA_primers > primers;  mysql -u alliumviewer -h 10.16.1.118  -D
-  onion_marker -e 'select * from primersearchview'  | awk 'FNR>1{print}' >> primers;cat
-  targets | fastaselect -c -f ../10.References/CUDH2150_merged.fasta > targets.fasta
-process: primersearch -seqall targets.fasta  -infile primers -mismatchpercent 10 -outfile
-  primersearch.out
-title: primersearch targets of new HRM sets to avoid redundancy

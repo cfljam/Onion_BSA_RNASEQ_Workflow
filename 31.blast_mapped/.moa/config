@@ -1,4 +1,0 @@
-db: /data/moa/db/onion/90.Onion_Map/10.mapped_blastdb/mapped_onion_seq
-input: ../30.blast_USDA_map/all_hits.fasta
-jobid: blast_USDA_map
-title: blast BSA hits to mapped seqs from AlliumMap

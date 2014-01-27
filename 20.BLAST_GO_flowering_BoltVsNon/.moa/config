@@ -1,7 +1,0 @@
-db: /data/moa/onion/90.Flowering_Genetics/01.Candidate_Blastdb/db
-input: ../19.collect_hits_BoltVsNon/contig_clusters.fasta
-jobid: BLAST_GO_flowering
-postcommand: cut -f1 blast_report | uniq | fastaselect -c -f ../19.collect_hits_BoltVsNon/contig_clusters.fasta
-  > flowering_CG_hits.fasta
-program: blastx
-title: blast Bolt vs NonBolt hits against CGS

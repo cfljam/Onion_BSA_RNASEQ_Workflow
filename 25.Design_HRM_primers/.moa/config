@@ -1,9 +1,0 @@
-jobid: vcf2gff
-postcommand: awk '!/NONE/ && $9 > 0.6' output   | sed 's/:/\t/g'  | sort | uniq >
-  filtered_output
-precommand: sh vcf2gvf.sh ../23.Get_Hit_VCF/sig_hit_contig_snps.vcf  contig_hits.gff;
-  sh vcf2gvf.sh ../23.Get_Hit_VCF/sig_hit_snps.vcf  CMH_hits.gff;awk '{print $1":"$2":"$3":"$4}'
-  CMH_hits.gff > targets
-process: python design_primers.py ../19.collect_hits_BoltVsNon/filtered_contig_clusters.fasta  contig_hits.gff  targets
-  60 90 > output
-title: convert vcf to gff3 then design  markers

@@ -1,4 +1,0 @@
-jobid: call_SNPS_Samtools
-process: 'samtools mpileup -uf ../10.References/CUDH2150_merged.fasta  ../14.merge_bam/*.bam  |
-  bcftools view -bvcg - > var.raw.bcf  '
-title: call snps

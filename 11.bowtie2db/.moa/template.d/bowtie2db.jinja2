@@ -1,8 +1,0 @@
-### run
-	echo run bowtie2_build
-	bowtie2-build {{ extra_params }} {{ input|join(',') }} {{ output }}
-	touch {{ output }}
-
-### clean
-	rm *.bt2 {{ bt2_outfile_base }}
-

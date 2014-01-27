@@ -1,8 +1,0 @@
-jobid: Get_Hit_VCF
-postcommand: bcftools view -l  sig_hit_SNPS   ../22.call_SNPS_Samtools/var.raw.bcf    >
-  sig_hit_snps.vcf
-precommand: awk '{print $1}' ../17.CMH_test_BoltVsNon/sig_hits | uniq  > sig_hit_contigs;awk
-  '{print $1,$2}' ../17.CMH_test_BoltVsNon/sig_hits | uniq  > sig_hit_SNPS
-process: bcftools view -D  sig_hit_contigs   ../22.call_SNPS_Samtools/var.raw.bcf    >
-  sig_hit_contig_snps.vcf
-title: form vcf of all snps in contigs with significant hits in CMH test

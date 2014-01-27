@@ -1,4 +1,0 @@
-jobid: merge_bam
-process: for sample in `cat samples`; do   samtools merge -f $sample.bam  ../12.bowtie2/$sample*.bam;  samtools
-  index $sample.bam; done
-title: merge sorted bamfiles
