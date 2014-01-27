@@ -55,3 +55,6 @@ CUDH*
 *Rproj*
 *.bz2
 *.pdf
+.RData
+.Rhistory
+.Rproj.user
