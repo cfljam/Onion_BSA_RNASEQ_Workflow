@@ -24,7 +24,6 @@ last_run_id
 *.log
 *log*
 *.mpileup
-*opoolation*
 *.out
 output.*
 *.phr
