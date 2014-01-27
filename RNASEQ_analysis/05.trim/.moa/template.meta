@@ -1,0 +1,7 @@
+class: core
+enabled: true
+installed: '2013-09-17T15:56:17.993252'
+name: simple
+priority: 100
+provider: core
+provider_type: core

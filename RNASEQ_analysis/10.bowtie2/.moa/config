@@ -1,0 +1,6 @@
+db: ../01.bowtie2db/CUDH2150t
+jobid: bowtie2
+process: cat sample.lst | while read line; do bowtie2 --sensitive -X 500 --un ${line}_unaligned
+  -S ${line}.sam -x {{db}} -1 ../05.trim/${line}_q15_p15_R1.fastq -2 ../05.trim/${line}_q15_p15_R2.fastq;
+  done
+title: run bowtie2 on onion trimmed fastq files

@@ -1,0 +1,6 @@
+Using input	/dev/fd/63
+Using output	filtered.sync
+Using gtf	indel-regions.gtf
+Using discardmode (keep-mode)	1
+Using test	0
+Using help	0

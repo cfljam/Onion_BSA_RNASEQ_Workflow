@@ -1,0 +1,6 @@
+Using input	/dev/fd/63
+Using output	indel-regions.gtf
+Using indel-window	5
+Using min-count	3
+Using test	0
+Using help	0

@@ -1,0 +1,3 @@
+jobid: addRG
+process: sh run.picard.sh
+title: add RGIDs

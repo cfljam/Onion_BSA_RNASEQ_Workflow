@@ -1,0 +1,7 @@
+Using input	/dev/fd/63
+Using output	subsample.sync
+Using maximum coverage	1000
+Using subsample method	withreplace
+Using target coverage	50
+Using test	0
+Using help	0
