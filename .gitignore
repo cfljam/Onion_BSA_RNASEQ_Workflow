@@ -39,7 +39,6 @@ output.*
 *.R~
 *report*
 *.sai
-*.sh
 *sorted*
 status
 *svn*
