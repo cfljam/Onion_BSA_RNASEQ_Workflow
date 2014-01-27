@@ -52,3 +52,5 @@ tmp
 *.vcf
 *.xml
 CUDH*
+*Rproj*
+*.bz2
