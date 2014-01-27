@@ -53,3 +53,8 @@ tmp
 *.vcf
 *.xml
 CUDH*
+*.fastq
+onerr
+succ
+*fastqc*
+*.bz2
