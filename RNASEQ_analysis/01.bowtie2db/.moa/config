@@ -1,0 +1,3 @@
+jobid: bowtie2db
+process: 'bowtie2-build -f CUDH2150_trinity.merged_0.98 CUDH2150t '
+title: make bowtie2 reference db
