@@ -1,0 +1,20 @@
+moa new simple -t 'run ePCR on existing sets'
+ls -la
+cat > primer_sets_evaluated
+less primer_sets_evaluated
+ls -l
+ls -l ..
+ls -l ../..
+ls -l ../..
+mysql
+mysql --h
+mysql --help
+mysql --help | less
+mysql -h 10.16.1.118 -D onion_marker -u alliumviewer -e "SELECT `Primerset_ID`,`L_primer_Sequence`,`R_primer_Sequence` FROM `primersetview` WHERE `Primerset_ID` = CONVERT(_utf8 'ACPA127' USING latin1) COLLATE latin1_swedish_ci"
+mysql -h 10.16.1.118 -D onion_marker -u alliumviewer -e "SELECT `Primerset_ID`,`L_primer_Sequence`,`R_primer_Sequence` FROM `primersetview` WHERE `Primerset_ID` = CONVERT(_utf8 'ACPA127' USING latin1) COLLATE latin1_swedish_ci" -P
+mysql -h 10.16.1.118 -D onion_marker -u alliumviewer -pe 'showdatabases';
+mysql -h 10.16.1.118 -D onion_marker -u alliumuser -pe 'showdatabases';
+mysql -h 10.16.1.118 -D onion_marker -u alliumuser -e 'showdatabases';
+mysql -h 10.16.1.118 -D onion_marker -u alliumuser -e 'show databases';
+mysql -h 10.16.1.118 -D onion_marker -u cfljam -e 'show databases';
+mysql -h 10.16.1.118 -D onion_marker -u cfljam -pe 'show databases';
