@@ -25,3 +25,15 @@ mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select primer_sets_eval
 mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select primer_sets_evaluated from primersetview WHERE Primerset_ID ="ACPA127"'
 mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA127"'
 mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA127"'
+moa set precommand
+ls
+ls
+for set in $(cat primer_sets_evaluated); do echo $SET; done
+for set in $(headprimer_sets_evaluated); do echo $set; done
+for set in $(head primer_sets_evaluated); do echo $set; done
+cat .moa/config
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e ''select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA127"'''; done
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \''select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA127"''; done
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA127"'; done
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA127"'; done
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA127"'; done
