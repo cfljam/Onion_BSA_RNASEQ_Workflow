@@ -62,3 +62,4 @@ for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16
 for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
 for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
 for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
+moa set precommand
