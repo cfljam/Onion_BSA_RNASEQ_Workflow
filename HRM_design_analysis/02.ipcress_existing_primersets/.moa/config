@@ -1,4 +1,4 @@
 jobid: ipcress_existing_primersets
-precommand: ' mysql -u alliumviewer -h 10.16.1.118  -D onion_marker -e ''select *
-  from primersetview WHERE Primerset_ID = ACPA127'''
+precommand: ' mysql -u alliumviewer -h 10.16.1.118  -D onion_marker -e ''select Primerset_ID,L_primer_Sequence,R_primer_Sequence  from
+  primersetview WHERE Primerset_ID ="ACPA127"'''
 title: run ePCR on existing sets

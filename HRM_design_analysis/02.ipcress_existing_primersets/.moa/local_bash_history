@@ -18,3 +18,10 @@ mysql -h 10.16.1.118 -D onion_marker -u alliumuser -e 'showdatabases';
 mysql -h 10.16.1.118 -D onion_marker -u alliumuser -e 'show databases';
 mysql -h 10.16.1.118 -D onion_marker -u cfljam -e 'show databases';
 mysql -h 10.16.1.118 -D onion_marker -u cfljam -pe 'show databases';
+moa set precommand
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select primer_sets_evaluated from primersetview WHERE Primerset_ID = ACPA127'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select primer_sets_evaluated from primersetview WHERE Primerset_ID = ACPA127'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select primer_sets_evaluated from primersetview WHERE Primerset_ID =ACPA127'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select primer_sets_evaluated from primersetview WHERE Primerset_ID ="ACPA127"'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA127"'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA127"'
