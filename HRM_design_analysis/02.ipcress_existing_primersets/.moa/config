@@ -1,5 +1,5 @@
 jobid: ipcress_existing_primersets
-precommand: for set in $(head primer_sets_evaluated); do   mysql -u alliumviewer -h
-  10.16.1.118  -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence  from  primersetview
-  WHERE Primerset_ID ="ACPA127"'; done
+precommand: for set in $(head primer_sets_evaluated); do echo   mysql -u alliumviewer
+  -h 10.16.1.118  -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence  from  primersetview
+  WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
 title: run ePCR on existing sets
