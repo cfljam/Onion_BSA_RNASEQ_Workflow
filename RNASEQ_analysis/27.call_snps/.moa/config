@@ -1,2 +1,3 @@
 jobid: call_snps
+precommand: ' ls -1  ../25.mpileup/*.bam > bamfiles'
 title: call snps to generate vcf

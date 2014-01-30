@@ -1,0 +1,26 @@
+moa new simple -t 'call snps to generate vcf'
+moa new simple -t 'call snps to generate vcf'
+moa new simple -t 'call snps to generate vcf'
+cd 27.call_snps/
+moa new simple -t 'call snps to generate vcf'
+bzcat ../25.mpileup/Bolt_Non_pop.mpileup.bz2 | bcftools -vc - comp20221_c0_seq1
+bzcat
+bzcat ../25.mpileup/Bolt_Non_pop.mpileup.bz2 | bcftools -vc - comp20221_c0_seq1
+bzcat ../25.mpileup/Bolt_Non_pop.mpileup.bz2 | bcftools -vc - comp20221_c0_seq1
+cat comp20221_c0_seq1 > testfile
+cat > testfile
+bzcat ../25.mpileup/Bolt_Non_pop.mpileup.bz2 | bcftools -vc - | less
+bzcat ../25.mpileup/Bolt_Non_pop.mpileup.bz2 | bcftools view -vc - comp20221_c0_seq1
+bzcat ../25.mpileup/Bolt_Non_pop.mpileup.bz2 | bcftools view -vc - | less
+bzcat ../25.mpileup/Bolt_Non_pop.mpileup.bz2 | bcftools view -vc - | less
+cd ../25.mpileup/Bolt_Non_pop.mpileup.bz2
+ls -l
+cd ../27.call_snps/
+ls -l
+rm testfile
+cat ../25.mpileup/.moa/config
+samtools mpileup -f ../01.bowtie2db/CUDH2150_trinity.merged_0.98 -B ../25.mpileup/BoltA1_RG.bam ../25.mpileup/BoltA2_RG.bam ../25.mpileup/BoltA3_RG.bam ../25.mpileup/BoltB1_RG.bam ../25.mpileup/BoltB2_RG.bam ../25.mpileup/BoltB3_RG.bam ../25.mpileup/NonA1_RG.bam ../25.mpileup/NonA2_RG.bam ../25.mpileup/NonA3_RG.bam ../25.mpileup/NonB1_RG.bam ../25.mpileup/NonB2_RG.bam ../25.mpileup/NonB3_RG.bam | less
+samtools mpileup -f ../01.bowtie2db/CUDH2150_trinity.merged_0.98 -B ../25.mpileup/BoltA1_RG.bam ../25.mpileup/BoltA2_RG.bam ../25.mpileup/BoltA3_RG.bam ../25.mpileup/BoltB1_RG.bam ../25.mpileup/BoltB2_RG.bam ../25.mpileup/BoltB3_RG.bam ../25.mpileup/NonA1_RG.bam ../25.mpileup/NonA2_RG.bam ../25.mpileup/NonA3_RG.bam ../25.mpileup/NonB1_RG.bam ../25.mpileup/NonB2_RG.bam ../25.mpileup/NonB3_RG.bam | bcftools view -vcg - | less
+samtools mpileup -f ../01.bowtie2db/CUDH2150_trinity.merged_0.98 -B ../25.mpileup/BoltA1_RG.bam ../25.mpileup/BoltA2_RG.bam ../25.mpileup/BoltA3_RG.bam ../25.mpileup/BoltB1_RG.bam ../25.mpileup/BoltB2_RG.bam ../25.mpileup/BoltB3_RG.bam ../25.mpileup/NonA1_RG.bam ../25.mpileup/NonA2_RG.bam ../25.mpileup/NonA3_RG.bam ../25.mpileup/NonB1_RG.bam ../25.mpileup/NonB2_RG.bam ../25.mpileup/NonB3_RG.bam | bcftools view -vcg - | less
+ls ../25.mpileup/BoltA1_RG.bam ../25.mpileup/BoltA2_RG.bam ../25.mpileup/BoltA3_RG.bam ../25.mpileup/BoltB1_RG.bam ../25.mpileup/BoltB2_RG.bam ../25.mpileup/BoltB3_RG.bam ../25.mpileup/NonA1_RG.bam ../25.mpileup/NonA2_RG.bam ../25.mpileup/NonA3_RG.bam ../25.mpileup/NonB1_RG.bam ../25.mpileup/NonB2_RG.bam ../25.mpileup/NonB3_RG.bam
+ls -1 ../25.mpileup/BoltA1_RG.bam ../25.mpileup/BoltA2_RG.bam ../25.mpileup/BoltA3_RG.bam ../25.mpileup/BoltB1_RG.bam ../25.mpileup/BoltB2_RG.bam ../25.mpileup/BoltB3_RG.bam ../25.mpileup/NonA1_RG.bam ../25.mpileup/NonA2_RG.bam ../25.mpileup/NonA3_RG.bam ../25.mpileup/NonB1_RG.bam ../25.mpileup/NonB2_RG.bam ../25.mpileup/NonB3_RG.bam
