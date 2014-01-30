@@ -44,3 +44,31 @@ bcftools view BSA_pools.bcf | less
 moa kill
 moa show
 bcftools view BSA_pools.bcf | less
+msp
+bsub moa run
+bjobs
+bkill 108869
+bjobs
+ls -l
+ls -l
+ls -l
+ls -l
+ls -l
+ls -l
+ls -l
+ls -l
+ls -l
+ls -l
+ls -l
+bjobs
+top
+ls -l
+moa status
+ls
+ls -l
+bcftools -view | less
+bcftools view BSA_pools.bcf | less
+moa status
+bjobs
+bkill 108970
+moa kill
