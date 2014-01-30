@@ -24,3 +24,12 @@ samtools mpileup -f ../01.bowtie2db/CUDH2150_trinity.merged_0.98 -B ../25.mpileu
 samtools mpileup -f ../01.bowtie2db/CUDH2150_trinity.merged_0.98 -B ../25.mpileup/BoltA1_RG.bam ../25.mpileup/BoltA2_RG.bam ../25.mpileup/BoltA3_RG.bam ../25.mpileup/BoltB1_RG.bam ../25.mpileup/BoltB2_RG.bam ../25.mpileup/BoltB3_RG.bam ../25.mpileup/NonA1_RG.bam ../25.mpileup/NonA2_RG.bam ../25.mpileup/NonA3_RG.bam ../25.mpileup/NonB1_RG.bam ../25.mpileup/NonB2_RG.bam ../25.mpileup/NonB3_RG.bam | bcftools view -vcg - | less
 ls ../25.mpileup/BoltA1_RG.bam ../25.mpileup/BoltA2_RG.bam ../25.mpileup/BoltA3_RG.bam ../25.mpileup/BoltB1_RG.bam ../25.mpileup/BoltB2_RG.bam ../25.mpileup/BoltB3_RG.bam ../25.mpileup/NonA1_RG.bam ../25.mpileup/NonA2_RG.bam ../25.mpileup/NonA3_RG.bam ../25.mpileup/NonB1_RG.bam ../25.mpileup/NonB2_RG.bam ../25.mpileup/NonB3_RG.bam
 ls -1 ../25.mpileup/BoltA1_RG.bam ../25.mpileup/BoltA2_RG.bam ../25.mpileup/BoltA3_RG.bam ../25.mpileup/BoltB1_RG.bam ../25.mpileup/BoltB2_RG.bam ../25.mpileup/BoltB3_RG.bam ../25.mpileup/NonA1_RG.bam ../25.mpileup/NonA2_RG.bam ../25.mpileup/NonA3_RG.bam ../25.mpileup/NonB1_RG.bam ../25.mpileup/NonB2_RG.bam ../25.mpileup/NonB3_RG.bam
+moa set precommand
+ls -1 ../25.mpileup/BoltA1_RG.bam ../25.mpileup/BoltA2_RG.bam ../25.mpileup/BoltA3_RG.bam ../25.mpileup/BoltB1_RG.bam ../25.mpileup/BoltB2_RG.bam ../25.mpileup/BoltB3_RG.bam ../25.mpileup/NonA1_RG.bam ../25.mpileup/NonA2_RG.bam ../25.mpileup/NonA3_RG.bam ../25.mpileup/NonB1_RG.bam ../25.mpileup/NonB2_RG.bam ../25.mpileup/NonB3_RG.bam > bamfiles
+ls
+samtools mpileup -f ../01.bowtie2db/CUDH2150_trinity.merged_0.98 -b bamfiles | bcftools view -vcg - | less
+samtools mpileup -uf ../01.bowtie2db/CUDH2150_trinity.merged_0.98 -b bamfiles | bcftools view -vcg - | less
+samtools mpileup -uf ../01.bowtie2db/CUDH2150_trinity.merged_0.98 -b bamfiles | bcftools view -vcg - | less
+samtools mpileup -uf ../01.bowtie2db/CUDH2150_trinity.merged_0.98 -b bamfiles -q 20 | bcftools view -vcg - | less
+samtools mpileup -uf ../01.bowtie2db/CUDH2150_trinity.merged_0.98 -b bamfiles -q 20 comp20221_c0_seq1 | bcftools view -vcg - | less
+samtools mpileup -uf ../01.bowtie2db/CUDH2150_trinity.merged_0.98 -b bamfiles -q 20 comp20221_c0_seq1 | bcftools view -vcg - | less
