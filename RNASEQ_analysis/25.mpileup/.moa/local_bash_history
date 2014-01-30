@@ -1,0 +1,185 @@
+moa new simple
+moa set process
+moa set title
+ls
+moa run --ol
+bjobs
+bjobs
+ls -l
+bjobs
+cd 25.mpileup/
+ls
+ls -l
+head Bolt_pop.mpileup
+moa show -a
+cd 25.mpileup/
+ls
+moa set process
+cd ../25.mpileup/
+ls
+moa show -a
+cd ../25.mpileup/
+ls
+moa show -a
+ls
+rm Bolt_pop.mpileup
+cd 25.mpileup/
+ls
+moa show -a
+cd 25.mpileup/
+moa show
+ls
+cd 25.mpileup/
+ls -l
+samtools view BoltA1_RG.bam | less
+ls -l
+moa show
+samtools mpileup -h
+samtools mpileup --help
+samtools mpileup
+cd ../25.mpileup/
+ls
+ls -l
+moa show -a
+samtools mpileup
+samtools view
+ls -l ..
+ls -l ../00.NXD_BOLT_SAMPLES/
+ls -l ../10.bowtie2/
+ls -l ../01.bowtie2db/
+less /workspace/genome_analysis/plant/Allium/cepa/NZGL00123a/32.trinity.cd-hits/CUDH2150_trinity.merged_0.98
+less /workspace/genome_analysis/plant/Allium/cepa/NZGL00123a/32.trinity.cd-hits/CUDH2150_trinity.merged_0.98
+ls -l
+cd 25.mpileup/
+ls -l
+rm Bolt_Non_pop.mpileup
+sl -l
+ls -l
+moa show
+msp
+ls -l
+moa show
+bsub moa run
+ls -l
+ls -lh
+less Bolt_Non_pop.mpileup
+cd -
+ls -lh
+ls -lh
+moa show
+cd 25.mpileup/
+ls -l
+ls -lh
+cd ../25.mpileup/
+ls -l
+moa status
+ls -lh
+bzip
+bzip2
+bzip2 --help
+cd ../25.mpileup/
+ls -l
+ls -l
+bzip2 Bolt_Non_pop.mpileup.bz2 | less
+bzip2 --help
+bzip2 -d Bolt_Non_pop.mpileup.bz2 | less
+bzip2 -d Bolt_Non_pop.mpileup.bz2 -c | less
+cat Bolt_Non_pop.mpileup | bzip2 > Bolt_Non_pop.mpileup.bz2
+cd ../25.mpileup/
+ls -l
+history | grep bzip
+moa show
+ls -lh
+bzip2 --help
+head -n 10000 Bolt_Non_pop.mpileup | bzip2 -z -c > Bolt_Non_pop.mpileup.bz2
+bzip2 -d Bolt_Non_pop.mpileup.bz2 -c | wc -l
+msp
+ls -l
+rm Bolt_*
+ls -l
+moa show
+bsub moa run
+cd -
+ls -l
+bjobs
+ls -l
+moa status
+ls -l
+top
+moa show
+ls -l
+bjobs
+bkill 108524
+msp
+ls -l
+rm Bolt_Non_pop.mpileup.bz2
+bsub moa run
+ls -l
+ls -l
+ls -l
+ls -l
+bjobs
+bjobs
+bjobs
+bjobs
+ls -l
+ls -l
+ls -l
+ls -l
+ls -lh
+ls -lh
+ls -lh
+bzip2 --help
+bzip2 -dc Bolt_Non_pop.mpileup.bz2 | less
+ls -lh
+top
+ls -l
+ls -l
+cd ../25.mpileup/
+ls -lh
+ls -lh
+moa status
+ls -lh
+bzip2 -dc Bolt_Non_pop.mpileup.bz2 | head
+moa show
+bzip2 -dc Bolt_Non_pop.mpileup.bz2 | head
+ls -l
+ls -l
+ls -l
+ls -lh
+cd ../25.mpileup/
+ls -l
+ls -lh
+ls -lh
+bjobs
+ls -l
+ls -lh
+cd ../25.mpileup/
+moa show
+ls -l
+ls -lh
+ls -l
+top
+ls -l
+cd ../25.mpileup/
+ls -l
+cd 25.mpileup/
+ls -l
+cd ../31.subsample_sync/\
+cd 25.mpileup/
+ls -l
+moa show
+bzcat Bolt_Non_pop.mpileup.bz2 | less
+ls -l
+cd ../25.mpileup/
+ls -l
+ls -lh
+moa show
+samtools view BoltB3_RG.bam | less
+moa show
+bzcat Bolt_Non_pop.mpileup.bz2 | head -n 10000
+bzcat Bolt_Non_pop.mpileup.bz2 | head -n 10000 > test.mpileup
+ls -l
+bcftools view -cg test.mpileup | less
+cd ../25.mpileup/
+moa show

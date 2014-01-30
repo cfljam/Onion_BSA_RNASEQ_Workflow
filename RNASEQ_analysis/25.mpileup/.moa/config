@@ -1,0 +1,6 @@
+jobid: mpileup
+process: samtools mpileup -uf ../01.bowtie2db/CUDH2150_trinity.merged_0.98 -B BoltA1_RG.bam
+  BoltA2_RG.bam BoltA3_RG.bam BoltB1_RG.bam BoltB2_RG.bam BoltB3_RG.bam NonA1_RG.bam
+  NonA2_RG.bam NonA3_RG.bam NonB1_RG.bam NonB2_RG.bam NonB3_RG.bam | bzip2 -z -c >
+  Bolt_Non_pop.mpileup.bz2
+title: 'run mpileup '
