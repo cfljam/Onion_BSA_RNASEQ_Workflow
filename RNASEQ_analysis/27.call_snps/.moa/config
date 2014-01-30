@@ -1,5 +1,5 @@
 jobid: call_snps
 precommand: ' ls -1  ../25.mpileup/*.bam > bamfiles'
 process: ' samtools mpileup -uf ../01.bowtie2db/CUDH2150_trinity.merged_0.98  -b  bamfiles
-  -q 20   | bcftools view -bvcg -  > BSA_pools.bcf'
+  -q 20 -1 6    | bcftools view -bvcg -  > BSA_pools.bcf'
 title: call snps to generate vcf

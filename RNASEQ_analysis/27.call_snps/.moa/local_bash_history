@@ -33,3 +33,14 @@ samtools mpileup -uf ../01.bowtie2db/CUDH2150_trinity.merged_0.98 -b bamfiles | 
 samtools mpileup -uf ../01.bowtie2db/CUDH2150_trinity.merged_0.98 -b bamfiles -q 20 | bcftools view -vcg - | less
 samtools mpileup -uf ../01.bowtie2db/CUDH2150_trinity.merged_0.98 -b bamfiles -q 20 comp20221_c0_seq1 | bcftools view -vcg - | less
 samtools mpileup -uf ../01.bowtie2db/CUDH2150_trinity.merged_0.98 -b bamfiles -q 20 comp20221_c0_seq1 | bcftools view -vcg - | less
+msp
+bsub moa run
+cd 27.call_snps/
+ls -l
+bcftools view BSA_pools.bcf | head
+bcftools view BSA_pools.bcf | less
+moa show
+bcftools view BSA_pools.bcf | less
+moa kill
+moa show
+bcftools view BSA_pools.bcf | less
