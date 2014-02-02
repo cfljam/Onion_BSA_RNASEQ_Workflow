@@ -279,3 +279,4 @@ for MARKER in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1
 for MARKER in $(cat primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID = '$MARKER'"; done | awk '!/^Primer/'
 for MARKER in $(cat primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID = '$MARKER'"; done | awk '!/^Primer/'
 moa set precommand
+msp
