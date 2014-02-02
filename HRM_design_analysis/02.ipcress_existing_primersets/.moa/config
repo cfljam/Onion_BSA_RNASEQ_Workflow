@@ -3,5 +3,5 @@ precommand: ' for MARKER in $(cat primer_sets_evaluated); do  mysql -u alliumvie
   -h 10.16.1.118  -D onion_marker -e  "select Primerset_ID,L_primer_Sequence,R_primer_Sequence  from  primersetview
   WHERE  Primerset_ID = ''$MARKER''"; done | awk ''!/^Primer/ {print $1,$2,$3,"50","1000"}''
   > existing_primer_sets'
-process: ''
+process: ipcress existing_primer_sets CUDH2150_trinity.merged_0.98 > ipcress.out
 title: run ePCR on existing sets
