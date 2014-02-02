@@ -63,3 +63,218 @@ for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16
 for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
 for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
 moa set precommand
+moa set precommand
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\$set'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="$set"'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="$set"'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='$set'"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='$set'"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="$set""; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\""; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\""; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\""; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="$set""; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\""; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\""; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\""; done | awk '!/^Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='ACPA043'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='ACPA043';
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='ACPA043';
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\""; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\""; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \"select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"\"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \"select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set\"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \"select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set\"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \"select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\'$set\'\"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \"select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\'$set\'\"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \"select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\'$set\'\"; done
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \"select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\'$set\'\"; done | awk '!/^Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='ACPA040'"
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='ACPA040'"
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='ACPA040'";
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\'$set\'\'; done | awk '!/^Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='ACPA041''
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA041"'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\'$set\'\'; done | awk '!/^Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='ACPA039''
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='ACPA039''
+moa set precommand
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_prime _Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/' > primersets
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='ACPA039''
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_prime _Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e select Primerset_ID,L_primer_Sequence,R_prime _Sequence from primersetview WHERE Primerset_ID =ACPA041
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e select Primerset_ID,L_primer_Sequence,R_prime _Sequence from primersetview WHERE Primerset_ID ="ACPA041"
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_prime _Sequence from primersetview WHERE Primerset_ID ="ACPA041"';
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA041"';
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA041"';
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA041"';
+cat > CL.txt
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="TC3782"';
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="TC3782"'; > head
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="TC3782"'; > awk '!/Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="TC3782"'; | awk '!/Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="TC3782"' | awk '!/Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="TC3782"' | awk '!/Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="TC3782"' | awk '!/Primerset_ID/'
+cat > CL.txt
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_prime _Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_prime _Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_prime _Sequence from primersetview WHERE Primerset_ID =$set'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_prime _Sequence from primersetview WHERE Primerset_ID =$set'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\""; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\'$set\'"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\\'$set\'"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\\'$set\\'"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\""; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\\'$set\\'"; done | awk '!/^Primerset_ID/'
+cat CL.txt
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="TC3782"' | awk '!/Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\""; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="$set'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set'; done | awk '!/^Primerset_ID/'
+xargs
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\'$set\'"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\'$set\'"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\'$set\'"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\""; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\";"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\";"; done | awk '!/^Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA034";
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA034";
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA034";
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\";"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \"select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"\"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"\'; done | awk '!/^Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA042"'
+cat CL.txt
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA042"'
+cat CL.txt
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="TC3782"' | awk '!/Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set"; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\'$set\'"; done | awk '!/^Primerset_ID/'
+cat CL.txt
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\""; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$set'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"\'; done | awk '!/^Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA043"'
+cat CL.txt
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\""; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\""; done | awk '!/^Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA042"
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\""; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \"select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"\"; done | awk '!/^Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA041""
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='ACPA041'"
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA041"'
+cat CL.txt
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="TC3782"' | awk '!/Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\""; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"\'; done | awk '!/^Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA040"'
+cat CL.txt
+cat CL.txt
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="TC3782"' | awk '!/Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="ACPA040"' | awk '!/Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID like "ACPA040"'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID like ACPA040'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID like ACPA040'
+cat CL.txt
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="TC3782"' | awk '!/Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="ACPA040"' | awk '!/Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="ACPA040"'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="ACPA040"';
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID like "ACPA04%"'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID like "ACPA4%"'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID like "ACPA40"'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID like "ACPA40"'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="ACPA40"'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="ACPA40"' ;
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID= "ACPA40"' ;
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID = "ACPA40"' ;
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID = "ACPA40"'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="ACPA040"' | awk '!/Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="ACPA4%
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID like "ACPA4%
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID like "ACPA4%"'
+cat primer_sets_evaluated
+head primer_sets_evaluated
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="ACPA034% " '
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID="ACPA034%"'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID like "ACPA034%"'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID like "ACPA03%"'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview where Primerset_ID like "ACPA3%"'
+less primer_sets_evaluated
+head primersets
+head primersets
+rm primersets
+head primer_sets_evaluated
+sed 's/A0/A/' primer_sets_evaluated | less
+sed -i 's/A0/A/' primer_sets_evaluated | less
+less primer_sets_evaluated
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"\'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"\'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"\'; done | awk '!/^Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA38"'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"\'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"\'; done | awk '!/^Primerset_ID/' | less
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"\'; done | awk '!/^Primerset_ID/' | less
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"\'; done
+for set in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="$set"\'; done
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"\'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"\'; done | awk '!/^Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA34"'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"\'; done | awk '!/^Primerset_ID/'
+for set in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$set\"\'; done | awk '!/^Primerset_ID/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA43"'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA43"' | awk '!/Primer/'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA43"' | awk '!/Primer/' {print $1,$2,$3,"50","1000"}
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ="ACPA43"' | awk '!/Primer/ {print $1,$2,$3,"50","1000"}'
+for SET in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$SET\"\'; done | awk '!/^Primerset_ID/'
+for SET in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$SET\"\'; done
+for SET in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$SET\"\'; done
+for SET in $(head primer_sets_evaluated); do echo mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e \'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\"$SET\"\'; done
+ls -l
+cd 02.ipcress_existing_primersets/
+l s-l
+ls -l
+cat CL.txt
+msp
+moa show
+head primer_sets_evaluated
+test="ACPA34"
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='ACPA34'; "
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='ACPA34'";
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='ACPA34'';
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$test';
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$test";
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\'$test\'";
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =\'$test\'';
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e 'select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID =$test';
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='ACPA34'; "
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID ='ACPA34'";
+echo $test
+echo \'$test\'
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID = \'$test\'";
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID = '$test'";
+mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID = '$test'";
+for MARKER in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID = '$MARKER'"; done
+for MARKER in $(head primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID = '$MARKER'"; done | awk '!/^Primer/'
+for MARKER in $(cat primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID = '$MARKER'"; done | awk '!/^Primer/'
+for MARKER in $(cat primer_sets_evaluated); do mysql -u alliumviewer -h 10.16.1.118 -D onion_marker -e "select Primerset_ID,L_primer_Sequence,R_primer_Sequence from primersetview WHERE Primerset_ID = '$MARKER'"; done | awk '!/^Primer/'
