@@ -294,3 +294,4 @@ msp
 bsub moa run
 ls -lh
 less ipcress.out
+moa set postcommand
