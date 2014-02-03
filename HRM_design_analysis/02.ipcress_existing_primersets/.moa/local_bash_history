@@ -290,3 +290,7 @@ ln -s ../../RNASEQ_analysis/01.bowtie2db/CUDH2150_trinity.merged_0.98
 ls
 ipcress
 moa show
+msp
+bsub moa run
+ls -lh
+less ipcress.out
