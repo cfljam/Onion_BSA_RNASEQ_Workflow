@@ -183,3 +183,4 @@ ls -l
 bcftools view -cg test.mpileup | less
 cd ../25.mpileup/
 moa show
+msp

@@ -72,3 +72,63 @@ moa status
 bjobs
 bkill 108970
 moa kill
+msp
+ls
+rm BSA_pools.bcf
+bsub moa run
+ls -lh
+bjobs
+bcftools view BSA_pools.bcf | less
+msp
+moa status
+bcftools view BSA_pools.bcf | less
+bcftools view BSA_pools.bcf | less
+cd 27.call_snps/
+s -l
+ls
+bcftools view BSA_pools.bcf | less
+moa status
+ls -l
+bcftools view BSA_pools.bcf | less
+ls -l
+ls -lh
+vcftools --bcf BSA_pools.bcf --get-INFO PCHI2 --get-INFO QCHI2
+vcftools
+vcftools
+ls /
+ls /workspace
+ls /workspace/genome_analysis/
+ls /workspace/genome_analysis/plant/
+ls /workspace/genome_analysis/plant/Actinidia/
+du -f
+du
+du -a
+du -s
+du --help
+du --help | less
+df -s
+df -h
+ls /workspace2
+ls /workspace2/
+ls /workspace2/genome_analysis/plant/Actinidia/
+ls /workspace2/genome_analysis/plant/Actinidia/
+mad
+mad help
+mad --help
+ls
+ls /data/ComparativeDataSources/Actinidia/chinensis/
+ls /data/ComparativeDataSources/Actinidia/chinensis/HongYang/MappedToHongYang/MappingToDNASeq/
+ls /data/ComparativeDataSources/Actinidia/chinensis/HongYang/MappedToHongYang/MappingToDNASeq/20Monkeys/
+ls /data/ComparativeDataSources/Actinidia/chinensis/HongYang/MappedToHongYang/MappingToDNASeq/20Monkeys/ -l
+ls /data/ComparativeDataSources/Actinidia/chinensis/HongYang/MappedToHongYang/MappingToDNASeq/20Monkeys/ -l | less
+ls /data/ComparativeDataSources/Actinidia/chinensis/HongYang/MappedToHongYang/MappingToDNASeq/20Monkeys/ -l | less
+ls /data/ComparativeDataSources/Actinidia/chinensis/HongYang/MappedToHongYang/MappingToDNASeq/20Monkeys/rg.txt
+mail -s "RGs" john.mccallum@plantandfood.co.nz < /data/ComparativeDataSources/Actinidia/chinensis/HongYang/MappedToHongYang/MappingToDNASeq/20Monkeys/rg.txt
+cd 27.call_snps/
+ld -l
+ls -l
+bcftools view BSA_pools.bcf | less
+ls -la
+ls -lh
+ls -l
+vcftools
