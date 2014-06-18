@@ -72,36 +72,45 @@ column_names <-c("BoltA1_RG.bam",
 
 all_bolt <- read.table('data_files/All_bolt_assoc.cmh',col.names=c("chrom","pos","ref_base",column_names,"pval"))
 ```
-Plot distribution of P values
+### Plot distribution of P values
 ```{r fig.height=3, fig.width=6}
 hist(all_bolt$pval,xlab='P value',main='All')
 ```
 
-Now estimate FDR 
+
+### Estimate FDR 
 ```{r}
 library(qvalue)
 all_qobj <- qvalue(all_bolt$pval)
 par(mar = rep(2, 4)) ## so qplot doesnt fail due to margin settings
 qplot(all_qobj)
 ```
-Estimate p value cutoff for FDR= 0.01
+### Estimate p value cutoff for FDR= 0.01
 ```{r}
 FDR <- 0.01
 pval_cutoff <-max(all_qobj$pvalues[all_qobj$qvalues <= FDR])
 ```
 Using a pvalue cutoff of `r  pval_cutoff `
 
-
-Now load up the other CMH  comparisons
+### Load up the other CMH  comparisons
 ```{r cache=TRUE}
 acp267_LD <- read.table('data_files/ACP267_LD.cmh',col.names=c("chrom","pos","ref_base",column_names,"pval"))
 Bolt_notACP267 <-read.table('data_files/Bolt_notACP267_LD_assoc.cmh',col.names=c("chrom","pos","ref_base",column_names,"pval"))
 ```
-Bind together into one data frame
+Bind together into one data frame and change column names
 ```{r}
 combined <- cbind(all_bolt,acp267_LD$pval,Bolt_notACP267$pval)
+names(combined)<- gsub("\\$",replacement="_",names(combined))
 ```
 This provides data on `r  nrow(combined)` SNPs 
+
+### Make QQ Plots
+```{r fig.width=8,fig.height=8}
+library(qqman)
+qq(combined$pval,main="All")
+qq(combined$acp267_LD_pval,main='ACP267 LD')
+qq(combined$Bolt_notACP267_pval,main='Other Bolt')
+```
 
 Get the **minimum** pvalues by contig 
 ```{r}
