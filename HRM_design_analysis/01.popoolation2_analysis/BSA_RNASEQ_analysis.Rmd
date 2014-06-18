@@ -1,0 +1,181 @@
+Inspection of Popoolation2 Data from Onion BSA RNASEQ Experiment
+========================================================
+
+### Validation of Variants Identified in PoolSeq by Optimised High Resolution Melting Assay Design 
+** S. Baldwin,  S Thomson, M Pither-Joyce, K Wright, R Macknight, S Lui, B Warren, Z Dwight, J McCallum**
+
+
+`r date()`
+
+Analysis of PoPoolation2 output 
+-------------------------------
+
+Generated using script https://code.google.com/p/popoolation2/wiki/Manual#cmh-test.pl
+
+For CMH test details see: http://en.wikipedia.org/wiki/Cochran%E2%80%93Mantel%E2%80%93Haenszel_statistics
+
+
+
+Sample Ordering and coding as follows:
+
+| Number | Bam file      | Phenotype | ACP267 Genotype |
+|--------|---------------|-----------|-----------------|
+| 1      | BoltA1_RG.bam | Bolt      | AA              |
+| 2      | BoltA2_RG.bam | Bolt      | AA              |
+| 3      | BoltA3_RG.bam | Bolt      | AA              |
+| 4      | BoltB1_RG.bam | Bolt      | BB              |
+| 5      | BoltB2_RG.bam | Bolt      | BB              |
+| 6      | BoltB3_RG.bam | Bolt      | BB              |
+| 7      | NonA1_RG.bam  | Non-bolt  | AA              |
+| 8      | NonA2_RG.bam  | Non-bolt  | AA              |
+| 9      | NonA3_RG.bam  | Non-bolt  | AA              |
+| 10     | NonB1_RG.bam  | Non-bolt  | BB              |
+| 11     | NonB2_RG.bam  | Non-bolt  | BB              |
+| 12     | NonB3_RG.bam  | Non-bolt  | BB              |
+
+----------------------
+
+CMH Test Comparisons performed as follows:
+
+```
+[cfljam@genome3 RNASEQ_analysis]$ cat 35.cmh_test_all/.moa/config 
+jobid: cmh-test
+process: perl /software/x86_64/popoolation2/cmh-test.pl --input ../31.subsample_sync/subsample.sync  --output
+  All_bolt_assoc.cmh  --max-coverage 1000 --population 1-10,2-11,3-12,4-7,5-8,6-9
+title: run cmh-test to find all bolt-associated snps
+[cfljam@genome3 RNASEQ_analysis]$ cat 36.cmh_test_Chr1/.moa/config 
+jobid: cmh-test
+process: perl /software/x86_64/popoolation2/cmh-test.pl --input ../31.subsample_sync/subsample.sync  --output
+  ACP267_LD.cmh  --max-coverage 1000 --population 1-4,2-5,3-6,7-10,8-11,9-12
+title: run cmh-test to find snps in LD with ACP267
+[cfljam@genome3 RNASEQ_analysis]$ cat 37.cmh_test_Not_ACP267_linked/.moa/config 
+jobid: cmh-test
+process: perl /software/x86_64/popoolation2/cmh-test.pl --input ../31.subsample_sync/subsample.sync  --output
+  Bolt_notACP267_LD_assoc.cmh --max-coverage 1000  --population 1-7,2-8,3-9,4-10,5-11,6-12
+title: run cmh-test to find all bolt-associated snps
+```
+### Retrieve Bolt vs Non Bolt output  and Parse into data frame
+
+```{r cache=TRUE}
+column_names <-c("BoltA1_RG.bam",
+"BoltA2_RG.bam",
+"BoltA3_RG.bam",
+"BoltB1_RG.bam",
+"BoltB2_RG.bam",
+"BoltB3_RG.bam",
+"NonA1_RG.bam",
+"NonA2_RG.bam",
+"NonA3_RG.bam",
+"NonB1_RG.bam",
+"NonB2_RG.bam",
+"NonB3_RG.bam")  
+
+all_bolt <- read.table('data_files/All_bolt_assoc.cmh',col.names=c("chrom","pos","ref_base",column_names,"pval"))
+```
+Plot distribution of P values
+```{r fig.height=3, fig.width=6}
+hist(all_bolt$pval,xlab='P value',main='All')
+```
+
+Now estimate FDR 
+```{r}
+library(qvalue)
+all_qobj <- qvalue(all_bolt$pval)
+par(mar = rep(2, 4)) ## so qplot doesnt fail due to margin settings
+qplot(all_qobj)
+```
+Estimate p value cutoff for FDR= 0.01
+```{r}
+FDR <- 0.01
+pval_cutoff <-max(all_qobj$pvalues[all_qobj$qvalues <= FDR])
+```
+Using a pvalue cutoff of `r  pval_cutoff `
+
+
+Now load up the other CMH  comparisons
+```{r cache=TRUE}
+acp267_LD <- read.table('data_files/ACP267_LD.cmh',col.names=c("chrom","pos","ref_base",column_names,"pval"))
+Bolt_notACP267 <-read.table('data_files/Bolt_notACP267_LD_assoc.cmh',col.names=c("chrom","pos","ref_base",column_names,"pval"))
+```
+Bind together into one data frame
+```{r}
+combined <- cbind(all_bolt,acp267_LD$pval,Bolt_notACP267$pval)
+```
+This provides data on `r  nrow(combined)` SNPs 
+
+Get the **minimum** pvalues by contig 
+```{r}
+by_contig <- aggregate(data=combined,cbind(pval,acp267_LD$pval,Bolt_notACP267$pval) ~ chrom,min)
+colnames(by_contig) <- c("chrom", "all_pval","ACP267_pval","NotACP267_pval")
+```
+This provides data on `r  nrow(by_contig)` contigs 
+
+Now just take the contigs with any significant pvalues 
+
+```{r}
+Bolt_assoc_contigs <- by_contig[which((by_contig$all_pval < pval_cutoff) | 
+                                        (by_contig$ACP267_pval < pval_cutoff )|
+                                  (by_contig$NotACP267_pval < pval_cutoff)),]
+write.csv(Bolt_assoc_contigs,file='Bolt_assoc_contig_pvals.csv',row.names =FALSE)
+write.table(Bolt_assoc_contigs$chrom,file='sig_contigs.txt',quote=FALSE,col.names=FALSE,row.names=FALSE)
+```
+A total of   `r nrow(Bolt_assoc_contigs)` contigs have a signicant pvalue less than `r  pval_cutoff `
+
+Now plot these
+```{r}
+with(Bolt_assoc_contigs,pairs(~ all_pval + 
+                                ACP267_pval + 
+                                NotACP267_pval,
+                              main=" CMH Pvalues\n significant contigs only"))
+
+```
+
+ --------------------------------------
+ 
+### Form a Venn diagram 
+
+as described at http://www.ats.ucla.edu/stat/r/faq/venn.htm
+
+Form summary of booleans-contigs with minimum p-value < FDR cutoff
+```{r }
+library(limma)
+
+Bolt_assoc_contigs$sig_all <- Bolt_assoc_contigs$all_pval  < pval_cutoff
+Bolt_assoc_contigs$sig_ACP267 <- Bolt_assoc_contigs$ACP267_pval < pval_cutoff
+Bolt_assoc_contigs$sig_NotACP267 <- Bolt_assoc_contigs$NotACP267_pval < pval_cutoff
+
+a <- vennCounts(Bolt_assoc_contigs[5:7])
+vennDiagram(a,cex=1,main=" significant contigs only",names=c('ALL','ACP267','NOT_ACP267'))
+```
+For sanity check, do the same on the full data set
+```{r }
+by_contig$sig_all <- by_contig$all_pval < pval_cutoff#cos we only took sig hits for this frame
+by_contig$sig_ACP267 <- by_contig$ACP267_pval < pval_cutoff
+by_contig$sig_NotACP267 <- by_contig$NotACP267_pval < pval_cutoff
+
+b <- vennCounts(by_contig[5:7])
+vennDiagram(b,main=" full data set",cex=1,names=c('ALL','ACP267','NOT_ACP267'))
+dev.off()
+```
+
+Get the ePCR output to find which contigs have primer sets already 
+```{r}
+
+# existing_PCR_hits <- read.table('ipcress.out.txt',header=TRUE)
+# by_contig$marker <- by_contig$chrom %in% existing_PCR_hits$sequence_id
+# Bolt_assoc_contigs$marker  <- Bolt_assoc_contigs$chrom %in% existing_PCR_hits$sequence_id
+```
+Export these for the office fans
+```{r}
+write.csv(Bolt_assoc_contigs,file='Bolt_assoc_contigs.csv',row.names=FALSE)
+#write.csv(existing_PCR_hits,file='existing_PCR_hits.csv',row.names=FALSE)
+```
+Now do Venn Diagrams only for ones designed before
+
+```{r}
+# temp <- Bolt_assoc_contigs[which(Bolt_assoc_contigs$marker),]
+# a_designed <- vennCounts(temp[5:7])
+# vennDiagram(a_designed,cex=1,main=" design contigs only",names=c('ALL','ACP267','NOT_ACP267'))
+
+```
+
