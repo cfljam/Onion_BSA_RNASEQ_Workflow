@@ -2,10 +2,12 @@ Inspection of Popoolation2 Data from Onion BSA RNASEQ Experiment
 ========================================================
 
 ### Validation of Variants Identified in PoolSeq by Optimised High Resolution Melting Assay Design 
-** S. Baldwin,  S Thomson, M Pither-Joyce, K Wright, R Macknight, S Lui, B Warren, Z Dwight, J McCallum**
+
+**S. Baldwin,  S Thomson, M Pither-Joyce, K Wright, R Macknight, S Lui, B Warren, Z Dwight, J McCallum** 
 
 
 `r date()`
+---------------------------------------------
 
 Analysis of PoPoolation2 output 
 -------------------------------
@@ -37,22 +39,18 @@ Sample Ordering and coding as follows:
 
 CMH Test Comparisons performed as follows:
 
+### all bolt-associated snps
 ```
-[cfljam@genome3 RNASEQ_analysis]$ cat 35.cmh_test_all/.moa/config 
-jobid: cmh-test
-process: perl /software/x86_64/popoolation2/cmh-test.pl --input ../31.subsample_sync/subsample.sync  --output
-  All_bolt_assoc.cmh  --max-coverage 1000 --population 1-10,2-11,3-12,4-7,5-8,6-9
-title: run cmh-test to find all bolt-associated snps
-[cfljam@genome3 RNASEQ_analysis]$ cat 36.cmh_test_Chr1/.moa/config 
-jobid: cmh-test
-process: perl /software/x86_64/popoolation2/cmh-test.pl --input ../31.subsample_sync/subsample.sync  --output
-  ACP267_LD.cmh  --max-coverage 1000 --population 1-4,2-5,3-6,7-10,8-11,9-12
-title: run cmh-test to find snps in LD with ACP267
-[cfljam@genome3 RNASEQ_analysis]$ cat 37.cmh_test_Not_ACP267_linked/.moa/config 
-jobid: cmh-test
-process: perl /software/x86_64/popoolation2/cmh-test.pl --input ../31.subsample_sync/subsample.sync  --output
-  Bolt_notACP267_LD_assoc.cmh --max-coverage 1000  --population 1-7,2-8,3-9,4-10,5-11,6-12
-title: run cmh-test to find all bolt-associated snps
+perl /software/x86_64/popoolation2/cmh-test.pl --input ../31.subsample_sync/subsample.sync  --output All_bolt_assoc.cmh  --max-coverage 1000 --population 1-10,2-11,3-12,4-7,5-8,6-9
+```
+### snps in LD with ACP267
+```
+ perl /software/x86_64/popoolation2/cmh-test.pl --input ../31.subsample_sync/subsample.sync  --output ACP267_LD.cmh  --max-coverage 1000 --population 1-4,2-5,3-6,7-10,8-11,9-12
+```
+###  bolt-associated snps not in LD with ACP267
+
+```
+perl /software/x86_64/popoolation2/cmh-test.pl --input ../31.subsample_sync/subsample.sync  --output Bolt_notACP267_LD_assoc.cmh --max-coverage 1000  --population 1-7,2-8,3-9,4-10,5-11,6-12
 ```
 ### Retrieve Bolt vs Non Bolt output  and Parse into data frame
 
@@ -187,4 +185,10 @@ Now do Venn Diagrams only for ones designed before
 # vennDiagram(a_designed,cex=1,main=" design contigs only",names=c('ALL','ACP267','NOT_ACP267'))
 
 ```
+Show Session info
+```{r}
+sessionInfo()
+
+```
+
 
