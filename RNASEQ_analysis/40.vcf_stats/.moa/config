@@ -1,0 +1,4 @@
+jobid: vcf_stats
+postcommand: plot-vcfstats BSA_pools.vcf.stats  -p plots/
+process: bcftools stats BSA_pools.vcf.gz > BSA_pools.vcf.stats
+title: get vcf stats
