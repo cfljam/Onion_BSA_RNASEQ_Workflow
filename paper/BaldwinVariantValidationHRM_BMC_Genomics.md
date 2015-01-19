@@ -1,17 +1,17 @@
-Validation of Variants Identified in RNA PoolSeq by Optimised High Resolution Melting Assay Design 
+Validation of Variants Identified in RNA PoolSeq by Optimised High Resolution Melting Assay Design
 ===================================================================================================
 
-S. Baldwin^1^, S Thomson^1^, M Pither-Joyce^1^, K Wright^1^, B
-Warren^1^, S Liu^1^, Z Dwight^2^ , R. Lee^3^, R Macknight^3^, J
-McCallum^1\#^
+S. Baldwin<sup>1</sup>, S Thomson<sup>1</sup>, M Pither-Joyce<sup>1</sup>, K Wright<sup>1</sup>, B
+Warren<sup>1</sup>, S Liu<sup>1</sup>, Z Dwight<sup>2</sup> , R. Lee<sup>3</sup>, R Macknight<sup>3</sup>, J
+McCallum<sup>1 \#</sup>
 
-^1^ The New Zealand Institute for Plant & Food Research Limited, Private
+<sup>1</sup> The New Zealand Institute for Plant & Food Research Limited, Private
 Bag 4704, Christchurch, NEW ZEALAND
 
-^2^ Department of Pathology, School of Medicine, University of Utah,
+<sup>2</sup> Department of Pathology, School of Medicine, University of Utah,
 Salt Lake City, UT 84132, USA.
 
-^3^ Biochemistry Department, University of Otago, Dunedin, NEW ZEALAND
+<sup>3</sup> Biochemistry Department, University of Otago, Dunedin, NEW ZEALAND
 
 \# Corresponding Author <john.mccallum@plantandfood.co.nz>
 
@@ -38,7 +38,7 @@ melt prediction through the uMelt webservice. Melt prediction enabled
 large scale screens of candidate primer sets to select those predicted
 to reveal larger melt differences between reference and variant
 homozygotes. This workflow was evaluated by validating variants from
-bulked segregant RNA PoolSeq (BSR-seq) of F~2~ progeny pools of a wide
+bulked segregant RNA PoolSeq (BSR-seq) of F<sub>2</sub> progeny pools of a wide
 onion cross segregating for bolting (precocious flowering). The
 validation rates for HRM markers selected using optimised assay design
 were 69%, yielding 77 resolvable polymorphic HRM markers. Using a
@@ -54,7 +54,7 @@ second-generation sequencing. The large SNP set and markers developed in
 this reproducible onion stock will be useful for marker-assisted
 selection and comparative mapping for this important adaptive trait.
 
-Keywords 
+Keywords
 ---------
 
 PCR, diagnostics, bioinformatics, onion, PoolSeq
@@ -76,13 +76,13 @@ analysis (BSTA) methods have been described for plants [3-5] and catfish
 [6].
 
 Liu et al. [3] used bulked segregant RNA-Seq (BSR-seq) to identify the
-*gl3* gene in an F~2~ maize population where the recessive mutant is
+*gl3* gene in an F<sub>2</sub> maize population where the recessive mutant is
 involved in the accumulation of epicuticular wax. Trick et al. [4] used
 BSA and RNA-seq to identify and map SNPs to an interval containing the
 *GPC-B1* locus in wheat. In catfish the BSR-seq technique was used to
 identify genes involved in disease resistance and mapped using the
 reference genome [6]. In sunflower, Livaja *et al*. [5] used BSTA by
-pooling F~2~ lines that were homozygous resistant or susceptible and
+pooling F<sub>2</sub> lines that were homozygous resistant or susceptible and
 homozygous for markers flanking a known resistance associated interval
 to generate bulks. These were then used for pooled transcriptome
 sequencing and markers designed to resistance gene candidates mapped
@@ -119,7 +119,7 @@ pipelines.
 Onion and shallot (*Allium cepa* L.) are internationally important
 vegetable crops that have been domesticated for over 5000 years [11].
 Trancriptome-based genetic maps [12-14] are available but the huge
-nuclear genome size (1.8 x 10^10^ bp) has so far prevented development
+nuclear genome size (1.8 x 10<sup>10</sup>  bp) has so far prevented development
 of a genome reference. Onion is an outcrossing diploid, maintained
 traditionally as open-pollinated populations that are selected for
 adaptive traits but maintain high levels of heterozygosity [15, 16].
@@ -132,7 +132,7 @@ reported evidence for QTL in a wide onion cross conditioning ‘bolting’
 map and did not reveal any candidate genes linked with the major QTL
 *AcBlt1.*
 
-In the current study, we conducted BSR-seq on pools of RNA from F~2~
+In the current study, we conducted BSR-seq on pools of RNA from F<sub>2</sub>
 progeny used in validation of the *AcBlt1* QTL in the previous study. To
 validate leads we developed an improved HRM-based SNP validation
 workflow that incorporates amplicon melt prediction [20] for optimal
@@ -154,7 +154,7 @@ of 1247 bp. ‘CUDH2150’ was not only a parent of the population but being
 a doubled haploid provided an ideal homozygous reference transcriptome
 assembly as paralogous sequences could be identified.
 
-Sequencing of pooled RNA from bulbs of the 12 bulks of F~2~ progeny
+Sequencing of pooled RNA from bulbs of the 12 bulks of F<sub>2</sub> progeny
 yielded in the range of 19-27 million 100bp paired-end reads per pool
 (Table 1). Variant detection using Freebayes revealed 281,385 variants
 after filtering for those variants with minor allele frequencies between
@@ -288,9 +288,9 @@ major adaptive traits in onion.
 Methods
 -------
 
-### Tissue Sampling and RNA Sequencing 
+### Tissue Sampling and RNA Sequencing
 
-####  ‘CUDH2150’ Parental Reference Line 
+####  ‘CUDH2150’ Parental Reference Line
 
 Plants of the homozygous doubled haploid onion line ‘CUDH2150’ (Cornell
 University;[25, 26] were grown in short days (8h day) at 20 C to *circa*
@@ -303,10 +303,10 @@ using TruSeq RNA Sample Preparation v2.0 (Illumina) and sequenced on an
 Illumina HiSeq 2000 by NZ Genomics Ltd. Reads were submitted to Genbank
 SRA (SRX392929, SRX393053- SRX393057) under BioProject PRJNA60277.
 
-####  ‘CUDH2150’ x Nasik Red’ F~2~ Progeny Pools
+####  ‘CUDH2150’ x Nasik Red’ F<sub>2</sub> Progeny Pools
 
 Propagation, phenotyping, sampling and genotyping of progeny from two
-large F~2~ families from the wide onion cross ‘CUDH2150’ x ‘Nasik Red’,
+large F<sub>2</sub> families from the wide onion cross ‘CUDH2150’ x ‘Nasik Red’,
 segregating for bolting (precocious flowering) were described previously
 [18]. Bulbs from the two families which had been genotyped and found
 homozygous at the ‘ACP267’ marker linked to the *AcBlt1* QTL were sorted
@@ -395,7 +395,7 @@ using default settings. The final vcf file is available at
 
 ### HRM Assay Design
 
-#### Software Tool Development 
+#### Software Tool Development
 
 Python scripts previously used to design PCR primers [14] were updated
 to enable direct use of Primer3 V2.0 rather than the BioPython interface
@@ -509,7 +509,7 @@ Institute for Statistical Genetics’. We gratefully acknowledge the
 support of DNAture Ltd for reagents and Allium Solutions Ltd for field
 trialling.
 
-References 
+References
 -----------
 
 <span id="_ENREF_1" class="anchor"></span>1. Futschik A, Schlötterer C:
@@ -724,5 +724,3 @@ Table 3 Minor allele frequencies of SNPs assigned to chromosome 1
                                            BoltA
   ACPA40           GBGJ01051189            0.00
   ACPA59           GBGJ01059209            0.67
-
-
