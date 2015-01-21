@@ -44,7 +44,7 @@ markers.
 This method provides an efficient approach for medium-scale validation
 of variants from Pool-seq or other genetics approaches employing
 second-generation sequencing. Jupyter notebooks provide a lightweight but
-scalable means to share configuration, and organise documentation of complex
+scalable means to describe and share documentation of complex
 computational workflows such as those required for variant selection and genetic marker design.
 
 Keywords
