@@ -37,15 +37,15 @@ validation rates for HRM markers selected using optimised assay design
 were 69%, yielding 77 resolvable polymorphic HRM markers. Using a
 selective bin mapping strategy these markers validated the BSR-seq
 approach with enrichment for chromosome 1 and *AcBlt1* associated
-markers.
+markers. 
 
 ### Conclusions
 
 This method provides an efficient approach for medium-scale validation
 of variants from Pool-seq or other genetics approaches employing
-second-generation sequencing. The large SNP set and markers developed in
-this reproducible onion stock will be useful for marker-assisted
-selection and comparative mapping for this important adaptive trait.
+second-generation sequencing. Jupyter notebooks provide a lightweight but
+scalable means to share configuration, and organise documentation of complex
+computational workflows such as those required for variant selection and genetic marker design.
 
 Keywords
 ---------
@@ -182,24 +182,21 @@ environment.
 
 Although Galaxy provides an excellent graphical environment for
 organising large-scale variant analysis and assay design, we have
-utilised the iPython Notebook (<http://ipython.org/notebook.html>) as a
+utilised the Jupyter(previously iPython) Notebook (https://github.com/jupyter) as a
 means for desktop prototyping, documentation and sharing of design
 workflows. Although widely-used in the physical sciences, such notebooks
 have yet to gain wide usage for bioinformatics analysis. Our experience
 shows they are a highly visual, portable and expressive means to combine
 multiple tools in a reproducible manner. Since marker design from modern
 sequencing data will typically require multiple steps employing a
-variety of tools, the ability to use diverse tools and document this in
+variety of tools, the ability to combine these and document in
 a single, web-ready JSON file is a major aid to reproducibility and
 communication. While configuration of Galaxy tools requires server and
-systems administration resources, iPython notebooks may be configured
+systems administration resources, Jupyter notebooks may be configured
 for desktop or server usage. We have provided explanations of format
 requirements and command-line usage in the wiki at
-<https://github.com/cfljam/galaxy-pcr-markers/wiki/An-Introduction-to-the-PCR-Markers-Tools>.
-The wiki includes links to worked examples in iPython notebooks. In
-addition, we provide a simple Vagrant (https://www.vagrantup.com/)
-virtual machine definition that can be used to create a local iPython
-notebook server configured to run the notebook examples.
+<https://github.com/cfljam/galaxy-pcr-markers/wiki/An-Introduction-to-the-PCR-Markers-Tools>. The wiki includes links to worked examples in Jupyter notebooks. In
+addition, we provide a containerized Docker VM definition that can be used to create a local notebook server configured to run the notebook examples.
 
 ### HRM Marker Screening
 
@@ -258,9 +255,9 @@ of scripts and services in areas such as development of multi-allelic
 markers, probe design and secondary structure prediction.
 
 Although initial development of our marker design toolkit focused on the
-Galaxy bioinformatics environment, the iPython notebook has since
+Galaxy bioinformatics environment, the Jupyter(iPython) notebook has since
 emerged as a powerful means to develop and share scientific code, output
-and narrative as ‘executable explanations’. We suggest that iPython
+and narrative as ‘executable explanations’. We suggest that these
 notebook provides an ideal ‘electronic lab book’ for management and
 exchange of complex code-based workflows such as marker design and is
 worthy of wider usage by the bioinformatics community. Although the
@@ -270,8 +267,7 @@ customization of the software tools can be challenging for scientists.
 Automated provision of software appliances custom configured for assay
 design using Vagrant or containerization technologies such as Docker
 (<https://www.docker.com/>) will be the most practical means in future
-to deliver up-to-date Galaxy or iPython environments to scientists
-desktops.
+to deliver up-to-date environments to scientists desktop or server environments.
 
 Evaluation of the leads identified to date in our BSR-seq data suggest
 that the catalog of transcriptome and variant data we have developed
