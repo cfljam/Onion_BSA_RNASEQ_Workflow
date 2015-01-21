@@ -1,4 +1,4 @@
-Validation of Variants Identified in RNA PoolSeq by Optimised High Resolution Melting Assay Design
+Workflow for PoolSeq Variant Validation  by Optimised High Resolution Melting Assay Design
 ===================================================================================================
 
 S. Baldwin<sup>1</sup>, S Thomson<sup>1</sup>, M Pither-Joyce<sup>1</sup>, K Wright<sup>1</sup>, B
@@ -20,12 +20,12 @@ Abstract
 
 ### Background
 
-Improvements in sequencing technologies and services make global variant
-discovery for genetics feasible even for small projects and non-model
-systems. Validation is now a major technological and cost barrier to
-exploiting these leads. It is desirable to scale up SNP validation
-strategies that can be performed on standard and real-time PCR
-instruments available to most laboratories.
+Improvements in sequencing technologies and services enable large-scale variant
+discovery even for small genetics projects in non-model
+systems. Scaling validation of selected variants is now the principal barrier to
+applying sequence data in downstream genetic studies. It is desirable to identify SNP validation
+strategies that can be performed using PCR instrumentation and computational resources 
+readily in most laboratories.
 
 ### Results
 
