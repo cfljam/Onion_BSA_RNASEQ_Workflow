@@ -183,14 +183,13 @@ environment.
 Although Galaxy provides an excellent graphical environment for
 organising large-scale variant analysis and assay design, we have
 utilised the Jupyter(previously iPython) Notebook (https://github.com/jupyter) as a
-means for desktop prototyping, documentation and sharing of design
+means for  prototyping, documentation and sharing of design
 workflows. Although widely-used in the physical sciences, such notebooks
 have yet to gain wide usage for bioinformatics analysis. Our experience
-shows they are a highly visual, portable and expressive means to combine
-multiple tools in a reproducible manner. Since marker design from modern
-sequencing data will typically require multiple steps employing a
-variety of tools, the ability to combine these and document in
-a single, web-ready JSON file is a major aid to reproducibility and
+demonstrates they are a highly expressive and portable means to combine
+multiple tools in a reproducible manner, as reported in other domains(http://www.nature.com/news/interactive-notebooks-sharing-the-code-1.16261). Since marker design from modern
+sequencing data requires multiple steps and tools, the ability to 
+combine these and document in a single, web-ready JSON file is a major aid to reproducibility and
 communication. While configuration of Galaxy tools requires server and
 systems administration resources, Jupyter notebooks may be configured
 for desktop or server usage. We have provided explanations of format
