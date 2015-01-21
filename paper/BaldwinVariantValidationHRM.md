@@ -28,7 +28,7 @@ applying sequence data to downstream genetics. Most reported strategies rely on 
 ### Results
 
 We report a workflow for automated design of small-amplicon
-high-resolution melting (HRM) assays for validation of polymorphisms revealed by next-generation sequencing that may be run on Jupyter notebooks. Our publically-available tools for PCR primer pair design were enhanced by addition of amplicon melt predictionthrough the uMelt webservice. Melt prediction enabled large scale screens of candidate primer sets to select those predicted
+high-resolution melting (HRM) assays for large-scale validation of sequence polymorphisms that may be run on Jupyter notebooks. Our publically-available tools for PCR primer pair design were enhanced by addition of amplicon melt predictionthrough the uMelt webservice. Melt prediction enabled large scale screens of candidate primer sets to select those predicted
 to reveal larger melt differences between reference and variant
 homozygotes. This workflow was evaluated by validating variants from
 bulked segregant RNA PoolSeq (BSR-seq) of F<sub>2</sub> progeny pools of a wide
