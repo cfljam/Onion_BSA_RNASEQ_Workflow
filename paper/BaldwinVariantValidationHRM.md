@@ -23,12 +23,12 @@ Abstract
 Improvements in sequencing technologies and services enable large-scale variant
 discovery even for small genetics projects in non-model
 systems. Scaling validation of selected variants is now the principal barrier to
-applying sequence data in downstream genetic studies. Most reported strategies rely on either unreproducible informatics or proprietary assay design. It is desirable to identify SNP validation strategies that can be performed using PCR instrumentation and computational resources readily available to most laboratories.
+applying sequence data to downstream genetics. Most reported strategies rely on either unreproducible informatics or proprietary assay design. It is desirable to identify SNP validation strategies that can be performed using PCR instrumentation and computational resources readily available to most laboratories.
 
 ### Results
 
 We report a workflow for automated design of small-amplicon
-high-resolution melting (HRM) assays for validation of polymorphisms revealed by next-generation sequencing and containerized Jupyter notebooks for use on desktop or server. Our publically-available tools for PCR primer pair design were enhanced by addition of amplicon melt predictionthrough the uMelt webservice. Melt prediction enabled large scale screens of candidate primer sets to select those predicted
+high-resolution melting (HRM) assays for validation of polymorphisms revealed by next-generation sequencing that may be run on Jupyter notebooks. Our publically-available tools for PCR primer pair design were enhanced by addition of amplicon melt predictionthrough the uMelt webservice. Melt prediction enabled large scale screens of candidate primer sets to select those predicted
 to reveal larger melt differences between reference and variant
 homozygotes. This workflow was evaluated by validating variants from
 bulked segregant RNA PoolSeq (BSR-seq) of F<sub>2</sub> progeny pools of a wide
