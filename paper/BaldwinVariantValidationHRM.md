@@ -254,8 +254,8 @@ platforms. We see considerable scope for improving the current toolkit
 of scripts and services in areas such as development of multi-allelic
 markers, probe design and secondary structure prediction.
 
-Although initial development of our marker design toolkit focused on the
-Galaxy bioinformatics environment, the Jupyter(iPython) notebook has since
+Previous development of our marker design toolkit focused on the
+Galaxy bioinformatics environment. The Jupyter(iPython) notebook has since
 emerged as a powerful means to develop and share scientific code, output
 and narrative as ‘executable explanations’. We suggest that these
 notebook provides an ideal ‘electronic lab book’ for management and
@@ -266,7 +266,7 @@ not require large computational resources, configuration and
 customization of the software tools can be challenging for scientists.
 Automated provision of software appliances custom configured for assay
 design using Vagrant or containerization technologies such as Docker
-(<https://www.docker.com/>) will be the most practical means in future
+(https://www.docker.com/) will be the most practical means in future
 to deliver up-to-date environments to scientists desktop or server environments.
 
 Evaluation of the leads identified to date in our BSR-seq data suggest
